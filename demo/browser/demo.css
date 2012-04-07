@@ -62,7 +62,6 @@ body
     position: absolute;
     display: inline-block;
     list-style: none;
-    cursor: pointer;
 }
 
 .wmd-button > span {
@@ -72,6 +71,12 @@ body
     width: 20px;
     height: 20px;
     display: inline-block;
+    cursor: pointer;
+}
+
+.wmd-button > span:hover {
+    background-color: #dddddd;
+    border-radius: 2px;
 }
 
 .wmd-spacer1
@@ -87,7 +92,13 @@ body
     left: 300px;
 }
 
-
+.wmd-button > .wmd-disabled-img, .wmd-button > .wmd-disabled-img:hover
+{
+    opacity: 0.4;
+    cursor: default;
+    background-color: transparent;
+    border-radius: 0;
+}
 
 
 .wmd-prompt-background
