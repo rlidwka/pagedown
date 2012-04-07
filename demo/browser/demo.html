@@ -7,9 +7,9 @@
         
         <link rel="stylesheet" type="text/css" href="demo.css" />
         
-        <script type="text/javascript" src="../../Markdown.Converter.js"></script>
-        <script type="text/javascript" src="../../Markdown.Sanitizer.js"></script>
-        <script type="text/javascript" src="../../Markdown.Editor.js"></script>
+        <script type="text/javascript" src="../../lib/markdown.js"></script>
+        <script type="text/javascript" src="../../lib/Markdown.Converter.js"></script>
+        <script type="text/javascript" src="../../lib/Markdown.Editor.js"></script>
     </head>
     
     <body>
@@ -52,7 +52,7 @@ It also includes a help button.
 
         <script type="text/javascript">
             (function () {
-                var converter1 = Markdown.getSanitizingConverter();
+                var converter1 = new Markdown.Converter();
                 var editor1 = new Markdown.Editor(converter1);
                 editor1.run();
                 
