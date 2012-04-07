@@ -13,7 +13,6 @@
     // Used to work around some browser bugs where we can't use feature testing.
         uaSniffed = {
             isIE: /msie/.test(nav.userAgent.toLowerCase()),
-            isIE_5or6: /msie 6/.test(nav.userAgent.toLowerCase()) || /msie 5/.test(nav.userAgent.toLowerCase()),
             isOpera: /opera/.test(nav.userAgent.toLowerCase())
         };
 
@@ -1124,11 +1123,6 @@
             dialog.style.top = "50%";
             dialog.style.left = "50%";
             dialog.style.display = "block";
-            if (uaSniffed.isIE_5or6) {
-                dialog.style.position = "absolute";
-                dialog.style.top = doc.documentElement.scrollTop + 200 + "px";
-                dialog.style.left = "50%";
-            }
             doc.body.appendChild(dialog);
 
             // This has to be done AFTER adding the dialog to the form if you
